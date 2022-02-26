@@ -1,18 +1,29 @@
 const searchFood = () => {
   const searchInput = document.getElementById("search-input");
   const searchText = searchInput.value;
+
+  //clear Data
   searchInput.value = "";
+
+  //load data
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
-  //   console.log(url);
   fetch(url)
     .then((res) => res.json())
     .then((data) => displaySearchResult(data.meals));
 };
 
+const notFound = document.getElementById("not-found");
+notFound.style.display = "none";
+// const noInput = document.getElementById("no-input");
+// noInput.style.display = "none"
+
 const displaySearchResult = (meals) => {
   const searchResult = document.getElementById("search-result");
+  searchResult.textContent = "";
+  if (meals?.length == 0 || meals == null) {
+    notFound.style.display = "block";
+  }
   meals.forEach((meal) => {
-    console.log(meal);
     const div = document.createElement("div");
     div.classList.add = "col";
     div.innerHTML = `
@@ -39,6 +50,7 @@ const loadMealDetail = (mealId) => {
 
 const mealDetail = (meal) => {
   const mealDetail = document.getElementById("meal-detail");
+  mealDetail.textContent = "";
   const newDiv = document.createElement("div");
   newDiv.classList.add = "card";
   newDiv.innerHTML = `
@@ -51,7 +63,7 @@ const mealDetail = (meal) => {
               <p class="card-text">${meal.strInstructions.slice(0, 200)}.</p>
               <a href="${
                 meal.strYoutube
-              }" class="btn btn-primary">Watch Tutorial</a>
+              }" target="_blank" class="btn btn-primary">Watch Tutorial</a>
           </div>
   `;
   mealDetail.appendChild(newDiv);

@@ -5,3 +5,6 @@ body {
 .text-center {
   background-color: whitesmoke;
 }
+#no-input {
+  display: none;
+}
