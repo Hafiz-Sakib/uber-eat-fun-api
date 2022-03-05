@@ -6,27 +6,13 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "terminal.integrated.fontSize": 28,
   "gitlens.views.showRelativeDateMarkers": false,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
   "tailwindCSS.emmetCompletions": true,
   "debug.console.fontSize": 24,
   "workbench.iconTheme": "vscode-icons",
   "vsicons.dontShowNewVersionMessage": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.organizeImports": true
-  },
-  "eslint.alwaysShowStatus": true,
   "editor.fontFamily": "'cascadia code',Consolas, 'Courier New', monospace",
   "editor.inlineSuggest.enabled": true,
   "window.zoomLevel": -2,
