@@ -1,6 +1,6 @@
 {
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorBlinking": "expand",
   "editor.fontSize": 30,
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.CustomBrowser": "chrome",
